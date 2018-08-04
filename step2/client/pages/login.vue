@@ -1,6 +1,6 @@
 <template lang='pug'>
 el-card.login-card
-  el-form(:label-position="'top'", :model="loginForm")
+  el-form(:label-position="'top'", :model="loginForm", @submit.native.prevent="login")
     el-form-item(label="名前")
       el-input(v-model="loginForm.name")
     el-form-item.text-center
